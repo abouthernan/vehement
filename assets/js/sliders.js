@@ -25,11 +25,10 @@ const swiperHero = new Swiper(".mySwiper-hero", {
 
 const current = $('.counter-bar-dinamic')
 
-swiperHero.on('progress', function (e) {
+swiperHero.on('paginationUpdate', function (e) {
 
-  current.textContent = `0${e.activeIndex + 1}`
+  current.textContent = `0${e.activeIndex}`
   e.activeIndex == 6 ? current.textContent = '01' : null
-  e.activeIndex == 5 ? current.textContent = '01' : null
 
 })
 
@@ -40,6 +39,11 @@ const swiperPartners = new Swiper(".swiperPartners", {
   direction: "horizontal",
   spaceBetween: 4,
   loop: true,
+  pagination: {
+    el: '.swiper-pagination-partners',
+    clickable: true,
+    dynamicBullets: true,
+  },
   autoplay: {
     delay: 2000,
     pauseOnMouseEnter: true,
@@ -101,6 +105,7 @@ const swiperTeam = new Swiper(".team-slider", {
   pagination: {
     el: teamPaginator,
     clickable: true,
+    dynamicBullets: true,
   },
   navigation: {
     nextEl: teamNext,
