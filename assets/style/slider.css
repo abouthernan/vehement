@@ -1,15 +1,24 @@
 /* Swiper*/
 .section-swiper {
-  height: 100vh;
+  height: 60rem;
   display: grid;
   place-content: center;
   max-width: 120rem;
   margin: -2rem auto 0 auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section-swiper {
+    height: 100vh;
+  }
 }
 
 .mySwiper-hero {
   width: 90%;
   height: 48rem;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -21,7 +30,7 @@
 
 .mySwiper-hero .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.6rem;
   background: var(--negro);
   /* Center slide text vertically */
   display: -webkit-box;
@@ -49,7 +58,7 @@
 }
 
 .mySwiper-hero .swiper-slide .swiper__description .swiper__title .swiper__url {
-  font-size: 7rem;
+  font-size: var(--font-md);
   color: var(--blanco);
   -webkit-transition: background-position .5s;
   transition: background-position .5s;
@@ -74,7 +83,7 @@
 
 @media (min-width: 768px) {
   .mySwiper-hero .swiper-slide .swiper__description .swiper__title .swiper__url {
-    font-size: 11rem;
+    font-size: var(--font-xxl);
   }
 }
 
@@ -180,13 +189,13 @@
 }
 
 .partners__track {
-  padding: 4rem 0;
+  padding: 4rem 0 8rem;
   align-items: center;
 }
 
 @media (min-width: 768px) {
   .partners__track {
-    padding: 8rem 0;
+    padding: 4rem 0 8rem;
   }
 }
 
@@ -200,6 +209,9 @@
   width: 12rem;
 }
 
+.swiper-pagination-partners {
+  padding-bottom: 3rem;
+}
 .swiper-pagination-partners .swiper-pagination-bullet {
   background-color: var(--negro);
 }
@@ -228,7 +240,7 @@
   }
 
   .team__title {
-    font-size: 10rem;
+    font-size: var(--font-xxl);
   }
 }
 

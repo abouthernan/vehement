@@ -7,6 +7,9 @@
   /* slider team */
   --slide-transform: 0;
   --transition: 1s;
+  /*fonts*/
+  --font-xxl: 10rem;
+  --font-md: 4.3rem;
 }
 
 ::-webkit-scrollbar {
@@ -229,24 +232,25 @@ body {
 
 /*Section quote*/
 .quote {
-  height: 40rem;
+  height: auto;
   background: linear-gradient(to top, #141414, var(--negro));
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4rem 0;
 }
 
 .quote__text {
   text-align: center;
-  font-size: 6rem;
+  font-size: var(--font-md);
   line-height: 1;
   color: var(--blanco);
-  padding: 8rem 0;
 }
 
 @media (min-width: 768px) {
   .quote__text {
-    font-size: 10rem;
+    font-size: var(--font-xxl);
+    padding: 6rem 0;
   }
 }
 
@@ -270,7 +274,8 @@ body {
 @media (min-width: 768px) {
   .counter__items {
     justify-content: space-between;
-    min-height: 40rem;
+    height: auto;
+    padding: 6rem 0;
   }
 }
 
@@ -282,13 +287,13 @@ body {
 
 .counter__number {
   color: var(--blanco);
-  font-size: 5rem;
+  font-size: var(--font-md);
   font-weight: 700;
 }
 
 @media (min-width: 768px) {
   .counter__number {
-    font-size: 13rem;
+    font-size: var(--font-xxl);
   }
 }
 
@@ -314,6 +319,12 @@ body {
   bottom: -5rem;
   z-index: 1;
   transform: translate(-50%, -50%) rotateZ(0deg);
+}
+
+@media (min-width: 768px) {
+  .arrow-container {
+    bottom: 1rem;
+  }
 }
 
 .arrow-container:hover {
@@ -372,10 +383,17 @@ body {
 .slogan {
   width: 100%;
   padding: 2rem;
-  height: 40rem;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .banner,
+  .slogan { 
+    height: 40rem;
+  }
 }
 
 .banner {
@@ -389,7 +407,7 @@ body {
 .banner__title,
 .slogan__title {
   max-width: 120rem;
-  font-size: 7rem;
+  font-size: var(--font-md);
   text-align: center;
   line-height: 1;
   text-shadow: 1px 1px 10px rgb(0 0 0 / .1);
@@ -409,7 +427,7 @@ body {
 
   .banner__title,
   .slogan__title {
-    font-size: 11rem;
+    font-size: var(--font-xxl);
   }
 }
 
@@ -455,7 +473,7 @@ body {
   height: 100%;
 }
 
-.footer__video {
+.footer__img {
   width: 100%;
   height: 100%;
 }
@@ -476,7 +494,7 @@ body {
 
 .social-letters {
   position: absolute;
-  left: 2rem;
+  left: 0;
   top: 50%;
   z-index: 1;
   transform: rotate(-90deg);
