@@ -34,7 +34,7 @@
     </div>
   </header>
 
-  <section class="section-swiper">
+  <main class="section-swiper">
     <div class="swiper mySwiper-hero">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -79,6 +79,10 @@
       <span class="counter-bar counter-bar-dinamic">01</span>
       <span class="counter-bar">05</span>
     </div>
+  </main>
+
+  <section class="quote" id="quote">
+    <h2 class="quote__text container">Creativity, innovation and technology.</h2>
   </section>
 
   <section class="counter" id="counter">
@@ -101,6 +105,7 @@
   </section>
 
   <section class="partners">
+    <h2 class="partners__title">Our clients</h2>
     <div class="swiper swiperPartners">
       <div class="swiper-wrapper partners__track">
         <a href="https://nexgensoluciones.com/" target="_blank" class="swiper-slide partners__slide"> <!--Partner slide-->
@@ -119,6 +124,7 @@
           <img loading="lazy" class="partners__img" src="assets/img/client-gear-electric.png" alt="puede ser una imagen del logo de gearelectric.com">
         </a> <!--End partner slide-->
       </div>
+      <div class="swiper-pagination swiper-pagination-partners"></div>
     </div>
   </section>
 
@@ -273,23 +279,30 @@
     <h3 class="slogan__title">Remote First.</h3>
   </section>
 
-  <footer class="footer">
-    <div class="footer__logo">
-      <video class="footer__video" src="assets/img/footer.mp4" autoplay loop muted></video>
+  <section class="locations">
+    <div class="locations__content container">
+      <img loading="lazy" src="assets/img/maps.webp" alt="pude ser una imagen de un mapa mundial con puntos en colombia españa y turquía" class="locations__img">
     </div>
-    <p class="footer__text">Made by <a class="footer__url" href="https://www.vehement.co">Vehement</a></p>
-  </footer>
+  </section>
 
-  <a href="#counter" class="arrow-container" title="Ir abajo">
-  <span class="arrow"></span>
-  <span class="arrow"></span>  
-</a>
+  
+  <a href="#quote" class="arrow-container" title="Ir abajo">
+    <span class="arrow"></span>
+    <span class="arrow"></span>  
+  </a>
 
   <section class="social-letters">
     <a href="#" target="_blank">Ig.</a>
     <a href="https://open.spotify.com/show/54jAIwVgsapPF1nb24bUex?si=DlOzPp2jTOWU_f9EIJUI4Q&dl_branch=1" target="_blank">Sp.</a>
     <a href="https://www.youtube.com/channel/UCJcVsaIZ83aNDvh_R9VMEJA" target="_blank">Yt.</a>
   </section>
+
+  <footer class="footer">
+    <div class="footer__logo">
+      <video class="footer__video" src="assets/img/footer.mp4" autoplay loop muted></video>
+    </div>
+    <p class="footer__text">Powered by <a class="footer__url" href="https://www.vehement.co">Vehement</a></p>
+  </footer>
 
   <script src="assets/js/main.js" type="module"></script>
   <script src="assets/js/helpers.js" type="module"></script>
