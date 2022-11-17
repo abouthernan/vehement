@@ -8,13 +8,14 @@
 }
 
 .mySwiper-hero {
-  width: 90rem;
+  width: 90%;
   height: 48rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .mySwiper-hero {
-    width: 90%;
+    width: 90rem;
+    margin-top: -5rem;
   }
 }
 
@@ -155,8 +156,20 @@
 
 /*Section Partners*/
 .partners {
-  height: auto;
   background-color: var(--blanco);
+}
+
+.partners__title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .partners__title {
+    font-size: 8rem;
+  }
 }
 
 .swiperPartners {
@@ -167,8 +180,14 @@
 }
 
 .partners__track {
-  padding: 2rem;
+  padding: 4rem 0;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .partners__track {
+    padding: 8rem 0;
+  }
 }
 
 .partners__slide {
@@ -179,6 +198,10 @@
 
 .partners__img {
   width: 12rem;
+}
+
+.swiper-pagination-partners .swiper-pagination-bullet {
+  background-color: var(--negro);
 }
 
 /* Team Slider */
