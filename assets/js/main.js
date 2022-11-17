@@ -40,7 +40,7 @@ const observer = new IntersectionObserver(counterListener, {
 })
 
 const animCounter = () => {
-  const interval = 3500
+  const interval = 2000
   numCounter.forEach(item => {
     let startValue = 0
     let endValue = Number(item.getAttribute('data-val'))
