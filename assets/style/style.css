@@ -518,3 +518,25 @@ body {
   font-weight: 700;
   font: 1.8rem;
 }
+
+/* Boton whatsapp*/
+
+.whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 100%;
+  color: transparent;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp img {
+  width: 100%;
+  height: 100%;
+}
