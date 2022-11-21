@@ -95,6 +95,7 @@
   white-space: pre-wrap;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  font-family: var(--font-secondary);
 }
 
 .mySwiper-hero .swiper-slide.swiper-slide-active .swiper__description .swiper__text {
