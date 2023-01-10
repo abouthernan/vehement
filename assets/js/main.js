@@ -13,7 +13,11 @@ const navItems = $$('.nav__url')
 const openBurger = () => {
   burger.classList.toggle('open-burger')
   nav.classList.toggle('open-menu')
-  logo.src = nav.classList.contains('open-menu') ? 'assets/img/logo-black.webp' : 'assets/img/logo-white.webp'
+  if (window.location.pathname.includes('services')) {
+    logo.src = nav.classList.contains('open-menu') ? '../assets/img/logo-black.webp' : '../assets/img/logo-white.webp'
+  } else {
+     logo.src = nav.classList.contains('open-menu') ? 'assets/img/logo-black.webp' : 'assets/img/logo-white.webp'
+  }
   doc.classList.toggle('scroll-off')
 }
 
@@ -21,7 +25,11 @@ navItems.forEach(item => {
   item.addEventListener('click', () => {
     burger.classList.toggle('open-burger')
     nav.classList.toggle('open-menu')
-    logo.src = nav.classList.contains('open-menu') ? 'assets/img/logo-black.webp' : 'assets/img/logo-white.webp'
+    if (window.location.pathname.includes('services')) {
+      logo.src = nav.classList.contains('open-menu') ? '../assets/img/logo-black.webp' : '../assets/img/logo-white.webp'
+    } else {
+       logo.src = nav.classList.contains('open-menu') ? 'assets/img/logo-black.webp' : 'assets/img/logo-white.webp'
+    }
     doc.classList.toggle('scroll-off')
   })
 })
@@ -58,4 +66,5 @@ const animCounter = () => {
 // watch events
 
 burger.addEventListener('click', openBurger)
-observer.observe(counterSection)
+
+window.location.pathname.includes('services') ?  observer.disconnect() : observer.observe(counterSection)

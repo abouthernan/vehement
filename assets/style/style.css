@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 :root {
   --negro: #101010;
@@ -6,18 +6,21 @@
   --naranja: #ea712f;
   --naranja-hover: #e65c1a;
   --gris: #a3a3a3;
-  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-secondary: 'Poppins', sans-serif;
+  --gris-oscuro: #1e1e1e;
+  --font-primary: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
   /* slider team */
   --slide-transform: 0;
   --transition: 1s;
   /*fonts*/
   --font-xxl: 10rem;
   --font-md: 4.3rem;
+  --font-sm: 1.6rem;
 }
 
 ::-webkit-scrollbar {
-  width: .7rem;
+  width: 0.7rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -139,8 +142,8 @@ body {
   gap: 3rem;
   transform: translateY(-100%);
   opacity: 0;
-  transition: all .3s ease;
-  background-image: url('../img/bg-menu.svg');
+  transition: all 0.3s ease;
+  background-image: url("../img/bg-menu.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -156,7 +159,7 @@ body {
   color: var(--negro);
   font-size: 3rem;
   font-weight: 700;
-  transition: color .3s ease;
+  transition: color 0.3s ease;
   position: relative;
 }
 
@@ -165,10 +168,10 @@ body {
 }
 
 .nav__url::after {
-  content: '🡥';
+  content: "🡥";
   position: absolute;
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .nav__url:hover::after {
@@ -198,8 +201,8 @@ body {
   display: inline-block;
   height: 2px;
   margin: 4px 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   background-color: var(--blanco);
 }
 
@@ -259,7 +262,7 @@ body {
   text-align: center;
   margin-top: 4rem;
   width: 100%;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 
 .button-quoter:hover {
@@ -290,7 +293,6 @@ body {
     margin-top: 4rem;
     margin-bottom: 6rem;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -398,7 +400,7 @@ body {
 .arrow:before,
 .arrow:after {
   transition: all 0.4s ease;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   transform-origin: bottom right;
@@ -437,7 +439,7 @@ body {
 
 @media (min-width: 768px) {
   .banner,
-  .slogan { 
+  .slogan {
     height: 40rem;
   }
 }
@@ -456,7 +458,7 @@ body {
   font-size: var(--font-md);
   text-align: center;
   line-height: 1;
-  text-shadow: 1px 1px 10px rgb(0 0 0 / .1);
+  text-shadow: 1px 1px 10px rgb(0 0 0 / 0.1);
 }
 
 .banner__title {
@@ -470,7 +472,6 @@ body {
 }
 
 @media (min-width: 768px) {
-
   .banner__title,
   .slogan__title {
     font-size: var(--font-xxl);
@@ -530,7 +531,7 @@ body {
 
 .footer__url {
   color: var(--negro);
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .footer__url:hover,
@@ -557,7 +558,7 @@ body {
 
 .social-letters a {
   color: var(--blanco);
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   font-weight: 700;
   font: 1.8rem;
 }
@@ -582,4 +583,316 @@ body {
 .whatsapp img {
   width: 100%;
   height: 100%;
+}
+
+/* Services */
+
+.main-service {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.figure {
+  width: 100%;
+  height: 48rem;
+  position: relative;
+  box-shadow: inset 0px 0 25px 10px rgb(0 0 0 / 10%);
+  margin-bottom: 4rem;
+}
+
+.img-service {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  object-fit: cover;
+}
+
+.info-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 2rem;
+}
+
+.title-service {
+  font-size: 6rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--blanco);
+  line-height: 1;
+}
+
+.description-service {
+  color: var(--gris);
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  font-family: var(--font-secondary);
+}
+
+.btn {
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--naranja);
+  cursor: pointer;
+}
+
+.content-btn {
+  padding-bottom: 16rem;
+}
+
+.btn-primary {
+  background: var(--naranja);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background: #99481c;
+  border: 1px solid #99481c;
+}
+
+.btn-underline {
+  border: 1px solid var(--naranja);
+  color: var(--naranja);
+  margin-top: 1.5rem;
+}
+
+.btn-underline:hover {
+  box-shadow: inset 0 0 8px #ea712f;
+}
+
+.section-two {
+  background: var(--gris-oscuro);
+  position: relative;
+}
+
+.content-svg {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.section-two svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 5rem;
+  transform: rotateY(180deg);
+}
+
+.section-two svg path {
+  fill: var(--negro);
+  background-color: var(--negro);
+}
+
+.banner-content {
+  width: 100%;
+  height: 25rem;
+  padding: 2rem;
+  position: absolute;
+  top: -14rem;
+}
+
+.banner-content__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+.subservicios-cat {
+  color: var(--naranja);
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  padding: 13rem 2rem 2rem;
+}
+
+.subservicios-title {
+  font-size: 4rem;
+  line-height: 41.15px;
+  font-weight: 600;
+  color: var(--blanco);
+  text-align: left;
+  padding: 0 2rem;
+}
+
+.subservicios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+.subservicios-item {
+  color: var(--blanco);
+  position: relative;
+}
+
+.subservicios-item::before {
+  content: "✓";
+  color: var(--naranja);
+  display: inline-block;
+  width: 1rem;
+  position: absolute;
+  margin-left: -2rem;
+}
+
+.section-partners {
+  padding-top: 1rem;
+}
+
+.partners--black {
+  background-color: var(--negro) !important;
+}
+
+.partners--black .swiper-slide img {
+  filter: invert(1);
+  padding: 4rem 2rem;
+}
+
+.partners--black .swiper-pagination-partners {
+  margin-top: 4rem;
+}
+.partners--black .swiper-pagination-partners span {
+  background-color: var(--naranja) !important;
+}
+
+.title-customer {
+  color: var(--blanco);
+  font-size: 4rem;
+  text-align: center;
+  word-break: break-word;
+  white-space: pre-line;
+  margin-top: -3rem;
+}
+
+.title-customer--orange {
+  color: var(--naranja);
+}
+
+.footer-service {
+  background: var(--negro);
+}
+
+.footer-service p {
+  color: var(--blanco);
+}
+
+.footer-service a {
+  color: var(--blanco);
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .figure {
+    max-width: 90rem;
+    max-height: 48rem;
+    margin: auto;
+  }
+
+  .img-service {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title-service {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    line-height: 0;
+  }
+
+  .info-service {
+    margin-top: -5rem;
+    padding: 0 2rem;
+  }
+
+  .description-service {
+    max-width: 60rem;
+    color: var(--blanco);
+  }
+
+  .content-btn {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60rem;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 15rem;
+    padding-bottom: unset;
+  }
+
+  .btn {
+    max-width: 30rem;
+    margin: auto;
+  }
+
+  .banner-content {
+    max-width: 90rem;
+    height: 48rem;
+    margin: auto;
+    top: -13rem;
+    left: 0;
+    right: 0;
+  }
+
+  .banner-content__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .subservicios-cat {
+    padding: 41rem 2rem 2rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .subservicios-title {
+    font-size: 8rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .subservicios-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10rem auto;
+    place-items: center;
+  }
+
+  .title-customer {
+    font-size: 8rem;
+  }
+
+  .main-service {
+    margin-top: 9rem;
+  }
 }
