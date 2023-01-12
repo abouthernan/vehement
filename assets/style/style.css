@@ -155,6 +155,11 @@ body {
   opacity: 1;
 }
 
+.content-nav-url {
+  width: 100%;
+  height: 100%;
+}
+
 .nav__url {
   color: var(--negro);
   font-size: 3rem;
