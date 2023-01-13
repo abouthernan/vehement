@@ -637,7 +637,7 @@ body {
 }
 
 .description-service {
-  color: var(--gris);
+  color: var(--blanco);
   font-size: 1.6rem;
   text-align: center;
   width: 100%;
@@ -739,6 +739,7 @@ body {
 .subservicios-item {
   color: var(--blanco);
   position: relative;
+  font-size: 1.8rem;
 }
 
 .subservicios-item::before {
@@ -821,8 +822,8 @@ body {
   }
 
   .description-service {
+    margin-top: 2rem;
     max-width: 60rem;
-    color: var(--blanco);
   }
 
   .content-btn {
