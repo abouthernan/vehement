@@ -11,3 +11,7 @@
 - **Slider partners**: 120px de alto. (ancho relativo).
 
 - **Slider team**: 370px de ancho por 420px de alto.
+
+<br/><br/>
+
+<small>Develop by <a href="https://rxtsel.dev" target="_blank">rxtsel</a></small>
