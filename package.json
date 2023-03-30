@@ -1,6 +1,7 @@
 {
   "name": "vehement",
   "private": true,
+  "types": "module",
   "description": "A simple, modern website starter for Astro. Develop by @rxtsel",
   "author": "Cristhian Melo",
   "type": "module",
@@ -13,6 +14,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "2.1.8"
+    "@astrojs/react": "2.1.0",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "astro": "2.1.8",
+    "react": "18.0.0",
+    "react-dom": "18.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "5.57.0",
+    "eslint": "8.37.0",
+    "eslint-plugin-astro": "0.26.1"
   }
 }
