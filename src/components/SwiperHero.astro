@@ -1,0 +1,29 @@
+---
+import data from "../tmp/slider-hero.json"
+---
+
+<div class="swiper mySwiper-hero">
+  <div class="swiper-wrapper">
+  {data.map(({ title, image, url, description }) => (
+    <div class="swiper-slide">
+      <a class="content-nav-url" href={url}>
+        <img
+          loading="lazy"
+          class="swiper-img"
+          src={image}
+          alt="puede ser una imagen de una persona con gafas y pasamontanas en un computador aluciendo a la cyber seguridad"
+        />
+        <article class="swiper__description">
+          <h2 class="swiper__title">
+            <a href={url} class="swiper__url">{title}</a>
+          </h2>
+          <p class="swiper__text">Here description</p>
+        </article>
+      </a>
+    </div>
+  ))}
+  </div>
+</div>
+
+
+

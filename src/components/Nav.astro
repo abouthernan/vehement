@@ -1,0 +1,32 @@
+---
+const nav = {
+  home: '/',
+  cybersecurity: '/services/cybersecurity.html',  
+  design: '/services/design.html',
+  marketing: '/services/marketing.html',
+  develop: '/services/develop.html',
+  seo: '/services/seo.html',
+}
+---
+
+<nav class="nav">
+
+  {Object.entries(nav).map(([key, value]) => (
+    <a href={`${value}`} class="nav__url">{key}</a>
+  ))}
+
+  <div class="nav__social">
+    <a
+      href="https://open.spotify.com/show/54jAIwVgsapPF1nb24bUex?si=DlOzPp2jTOWU_f9EIJUI4Q&dl_branch=1"
+      class="nav__url--social"
+      target="_blank"
+      title="Spotify">Sp</a
+    >
+    <a
+      href="https://www.youtube.com/channel/UCJcVsaIZ83aNDvh_R9VMEJA"
+      class="nav__url--social"
+      target="_blank"
+      title="Youtube">Yt</a
+    >
+  </div>
+</nav>

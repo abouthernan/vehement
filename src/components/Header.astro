@@ -1,0 +1,30 @@
+---
+import Nav from "./Nav.astro"
+import ToggleMenu from "./ToggleMenu.astro"
+import logoWhite from "../assets/img/logo-white.webp"
+import logoAnimated from "../assets/img/logo-animado.mp4"
+---
+
+<header class="header container">
+  <a href="/" class="header__logo">
+    <img
+      loading="lazy"
+      class="logo"
+      src={logoWhite}
+      alt="puede ser una imagen que contiene un logo de vehement"
+    />
+    <video
+      class="logo-desktop"
+      src={logoAnimated}
+      autoplay
+      loop
+      muted
+      width="100"
+      height="100" />
+  </a>
+
+  <Nav />
+
+  <ToggleMenu />
+
+</header>
