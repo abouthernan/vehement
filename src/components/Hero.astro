@@ -1,16 +1,55 @@
 ---
+import { t } from "i18next"
 import { SwiperHero } from './swiper/hero/SwiperHero.tsx'
 import ScrollDown from './ScrollDown.astro'
+import SocialLinks from './SocialLinks.astro'
+
+import cybersecurityImg from '../assets/img/services/cybersecurity.webp'
+import designImg from '../assets/img/services/design.webp'
+import marketingImg from '../assets/img/services/marketing.webp'
+import developImg from '../assets/img/services/develop.webp'
+import seoImg from '../assets/img/services/seo.webp'
+
+const swiperHeroData = {
+  cybersecurity: {
+    url: t("menu.routes.cybersecurity"),
+    img: cybersecurityImg,
+    description: t("menu.description.cybersecurity")
+  },
+  design: {
+    url: t("menu.routes.design"),
+    img: designImg,
+    description: t("menu.description.design")
+  },
+  marketing: {
+    url: t("menu.routes.marketing"),
+    img: marketingImg,
+    description: t("menu.description.marketing")
+  },
+  develop: {
+    url: t("menu.routes.develop"),
+    img: developImg,
+    description: t("menu.description.develop")
+  },
+  seo: {
+    url: t("menu.routes.seo"),
+    img: seoImg,
+    description: t("menu.description.seo")
+  }
+}
 ---
 
 <main class="section-swiper">
-  <SwiperHero client:load />
+  <SwiperHero client:load data={swiperHeroData}/>
+  <section class="social__letters">
+    <SocialLinks className="social__letters-url"/>
+  </section>
   <ScrollDown />
 </main>
 
 <style>
   .section-swiper {
-    height: 60vh;
+    height: 60rem;
     display: grid;
     place-content: center;
     max-width: 120rem;
@@ -23,5 +62,33 @@ import ScrollDown from './ScrollDown.astro'
     .section-swiper {
       height: 100vh;
     }
+  }
+
+  .social__letters-url:hover {
+    color: var(--naranja);
+  }
+
+  .social__letters {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    transform: rotate(-90deg);
+    display: flex;
+    gap: 2rem;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .social__letters {
+      display: flex;
+    }
+  }
+
+  .social__letters-url {
+    color: var(--blanco);
+    transition: color 0.3s ease-in-out;
+    font-weight: 700;
+    font: 1.8rem;
   }
 </style>

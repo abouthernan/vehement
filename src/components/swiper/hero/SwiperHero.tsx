@@ -5,41 +5,25 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/mousewheel'
 
-import cybersecurityImg from '../../../assets/img/services/cybersecurity.webp'
-import designImg from '../../../assets/img/services/design.webp'
-import marketingImg from '../../../assets/img/services/marketing.webp'
-import developImg from '../../../assets/img/services/develop.webp'
-import seoImg from '../../../assets/img/services/seo.webp'
-
-const swiperHero = {
-  cyber_security: {
-    url: './services/cybersecurity',
-    img: cybersecurityImg,
-    description: 'Ethical Hacking / Forensic Informatics / WPT / Hardering\n\nAppliances / BCP / DRP / Risk Management Security / SGSI /\n\nMonitoring'
-  },
-  design: {
-    url: './services/design',
-    img: designImg,
-    description: 'UX / UI / Web / Branding / Brand Book / Packing'
-  },
-  marketing: {
-    url: './services/marketing',
-    img: marketingImg,
-    description: 'Digital Strategy / Content / Social Media / Paid Social\n\nCampaigns / SEM / Email & SMS / Whatsapp'
-  },
-  develop: {
-    url: './services/develop',
-    img: developImg,
-    description: 'Web / E-commerce / Apps'
-  },
-  seo: {
-    url: './services/seo',
-    img: seoImg,
-    description: 'Optimization / Keyword Research'
-  }
+export interface SwiperHeroProps {
+  data: Root
 }
 
-export function SwiperHero() {
+export interface Root {
+  cybersecurity: Data
+  design: Data
+  marketing: Data
+  develop: Data
+  seo: Data
+}
+
+export interface Data {
+  url: string
+  img: string
+  description: string
+}
+
+export function SwiperHero({ data }: SwiperHeroProps) {
   return (
     <>
       <Swiper
@@ -65,7 +49,7 @@ export function SwiperHero() {
           e.activeIndex == 6 ? counterBar.textContent = '01' : null
         }}
       >
-        {Object.entries(swiperHero).map(([key, value]) => (
+        {Object.entries(data).map(([key, value]) => (
           <SwiperSlide
             key={key}
           >

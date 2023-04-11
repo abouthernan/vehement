@@ -1,0 +1,20 @@
+---
+export interface Props {
+  className: string
+}
+
+import social from '../assets/data/social.json'
+
+const { className } = Astro.props as Props
+---
+
+{social.map(item => (
+  <a
+    href={item.url}
+    class={className}
+    target="_blank"
+    title={item.name}
+  >
+    {item.name}
+  </a>
+))}

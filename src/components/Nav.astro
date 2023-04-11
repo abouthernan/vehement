@@ -1,38 +1,45 @@
 ---
-const menu = {
-  nav: {
-    home: '/',
-    cybersecurity: '/services/cybersecurity',  
-    design: '/services/design',
-    marketing: '/services/marketing',
-    develop: '/services/develop',
-    seo: '/services/seo'
+import { t } from "i18next"
+import social from '../assets/data/social.json' 
+import SocialLinks from './SocialLinks.astro'
+
+const nav = [
+  {
+    name: t("menu.nav.home"),
+    url: t("menu.routes.home"),
   },
-  social: {
-    spotify: 'https://open.spotify.com/show/54jAIwVgsapPF1nb24bUex?si=DlOzPp2jTOWU_f9EIJUI4Q&dl_branch=1',
-    youtube: 'https://www.youtube.com/channel/UCJcVsaIZ83aNDvh_R9VMEJA'
-  }
-}
+  {
+    name: t("menu.nav.cybersecurity"),
+    url: t("menu.routes.cybersecurity"),
+  },
+  {
+    name: t("menu.nav.design"),
+    url: t("menu.routes.design"),
+  },
+  {
+    name: t("menu.nav.marketing"),
+    url: t("menu.routes.marketing"),
+  },
+  {
+    name: t("menu.nav.develop"),
+    url: t("menu.routes.develop"),
+  },
+  {
+    name: t("menu.nav.seo"),
+    url: t("menu.routes.seo"),
+  },
+]
 ---
 
 <nav class='nav'>
-
-  {Object.entries(menu.nav).map(([key, value]) => (
-    <a href={value} class="nav__url">{key}</a>
+  {nav.map(item => (
+    <a href={item.url} class='nav__url'>
+      {item.name}
+    </a>
   ))}
 
   <div class="nav__social">
-    {Object.entries(menu.social).map(([key, value]) => (
-        <a
-          href={value}
-          class="nav__url--social"
-          target="_blank"
-          title={key}
-        >
-        {key === 'spotify' && 'Sp.'}
-        {key === 'youtube' && 'Yt.'}
-      </a> 
-    ))} 
+    <SocialLinks className="nav__url--social" />
   </div>
 </nav>
 
