@@ -1,0 +1,61 @@
+---
+import { t } from 'i18next'
+import team from '../assets/data/team.json'
+import { SwiperTeam } from './swiper/team/SwiperTeam.tsx'
+import { concatImgToObject } from '../utils'
+
+import hernan_estupinan from '../assets/img/team/hernan-estupinan.webp'
+import diego_rico from '../assets/img/team/diego-rico.webp'
+import laura_diaz from '../assets/img/team/laura-diaz.webp'
+import maria_jose_galvis from '../assets/img/team/maria-jose-galvis.webp'
+import valen_colorado from '../assets/img/team/valen-colorado.webp'
+import cristhian_melo from '../assets/img/team/cristhian-melo.webp'
+import felipe_estupinan from '../assets/img/team/felipe-estupinan.webp'
+
+const IMAGES = {
+  hernan_estupinan,
+  diego_rico,
+  laura_diaz,
+  maria_jose_galvis,
+  valen_colorado,
+  cristhian_melo,
+  felipe_estupinan,
+}
+
+const swiperTeamData = concatImgToObject(team, IMAGES)
+---
+
+<section class="team">
+  <div class="container">
+    <h2 class="team__title">We are creative people</h2>
+    <SwiperTeam client:visible data={swiperTeamData} />
+  </div>
+</section>
+
+<style>
+  .team {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .team__title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--blanco);
+    padding: 2rem 0;
+  }
+
+  @media (min-width: 768px) {
+    .team {
+      display: grid;
+      place-content: center;
+      overflow: hidden;
+      min-height: 100vh;
+    }
+
+    .team__title {
+      font-size: var(--font-xxl);
+    }
+  }
+</style>

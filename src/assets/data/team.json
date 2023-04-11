@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Hernán Estupiñán",
+    "rol": "Marketing Director",
+    "linkedin": "https://www.linkedin.com/in/abouthernan",
+    "slug": "hernan-estupinan"
+  },
+  {
+    "name": "Diego Rico",
+    "rol": "Business Developer Director",
+    "linkedin": "https://www.linkedin.com/in/diego-rico-leal",
+    "slug": "diego-rico"
+  },
+  {
+    "name": "Laura Díaz",
+    "rol": "Analytics Specialist",
+    "linkedin": "https://www.linkedin.com/in/laura-diaz-639233187",
+    "slug": "laura-diaz"
+  },
+  {
+    "name": "María José Galvis",
+    "rol": "Lead Graphic Designer",
+    "linkedin": "https://www.linkedin.com/in/mar%C3%ADa-jos%C3%A9-galvis-23a05819a",
+    "slug": "maria-jose-galvis"
+  },
+  {
+    "name": "Valen Colorado",
+    "rol": "Social Media Designer",
+    "linkedin": "https://www.linkedin.com/in/laura-valentina-colorado-delgadillo-5783681a3",
+    "slug": "valen-colorado"
+  },
+  {
+    "name": "Cristhian Melo",
+    "rol": "Frontend Developer",
+    "linkedin": "https://www.linkedin.com/in/rxtsel",
+    "slug": "cristhian-melo"
+  },
+  {
+    "name": "Felipe Estupiñán",
+    "rol": "Chief Information Officer",
+    "linkedin": "https://www.linkedin.com/in/andr%C3%A9s-felipe-estupi%C3%B1%C3%A1n-sanabria",
+    "slug": "felipe-estupinan"
+  }
+]

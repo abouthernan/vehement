@@ -1,0 +1,51 @@
+---
+import { t } from 'i18next'
+import { SwiperPartners } from './swiper/partners/SwiperPartners.tsx'
+import partners from '../assets/data/partners.json'
+import { concatImgToObject } from '../utils'
+
+import dra_aura_ruiz from '../assets/img/clients/dra-aura-ruiz.png'
+import gear_electric from '../assets/img/clients/gear-electric.png'
+import hotel_clarion from '../assets/img/clients/hotel-clarion.png'
+import nextgen_soluciones from '../assets/img/clients/nextgen-soluciones.png'
+import perez_lara from '../assets/img/clients/perez-lara.png'
+import purezza from '../assets/img/clients/purezza.png'
+import waterlogic from '../assets/img/clients/waterlogic.png'
+import wearetop from '../assets/img/clients/wearetop.png'
+
+const IMAGES = {
+  dra_aura_ruiz,
+  gear_electric,
+  hotel_clarion,
+  nextgen_soluciones,
+  perez_lara,
+  purezza,
+  waterlogic,
+  wearetop
+}
+
+const swiperPartnersData = concatImgToObject(partners, IMAGES)
+---
+<section class="partners">
+  <h2 class="partners__title">{t("partners")}</h2> 
+  <SwiperPartners client:visible data={swiperPartnersData}  />
+</section>
+
+<style>
+  .partners {
+    background-color: var(--blanco);
+  }
+
+  .partners__title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .partners__title {
+      font-size: 8rem;
+    }
+  } 
+</style>

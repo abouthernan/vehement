@@ -1,0 +1,85 @@
+---
+import { t } from "i18next"
+---
+
+<section class="quote" id="quote">
+  <h2 class="quote__text container">
+    {t("quote.title")}
+  </h2>
+  <a
+    href="https://quoter.vehement.co"
+    aria-label={t("quote.button")}
+    title={t("quote.button")}
+    class="button-quoter"
+  >
+    {t("quote.button")} 
+  </a>
+
+  <p class="quoter__text">{t("quote.description")}</p>
+</section>
+
+<style>
+  .quote {
+    height: auto;
+    background: linear-gradient(to top, #141414, var(--negro));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .quote__text {
+    text-align: center;
+    font-size: var(--font-md);
+    line-height: 1;
+    color: var(--blanco);
+  }
+
+  .button-quoter {
+    color: var(--blanco);
+    background: var(--naranja);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+
+  .button-quoter:hover {
+    background: var(--naranja-hover);
+  }
+
+  .quoter__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    color: var(--blanco);
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .button-quoter {
+      max-width: 30rem;
+      padding: 3rem;
+      margin-top: 0;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    .quoter__text {
+      font-size: 2.4rem;
+      margin-top: 4rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .quote__text {
+      font-size: var(--font-xxl);
+      padding: 6rem 0;
+    }
+  }
+</style>

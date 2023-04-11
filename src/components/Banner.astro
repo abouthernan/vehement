@@ -1,0 +1,64 @@
+---
+import { t } from "i18next"
+---
+
+<article class="banner">
+  <h3 class="banner__title">{t("banner.textOne")}</h3>
+</article>
+
+<article class="slogan">
+  <h3 class="slogan__title">{t("banner.textTwo")}</h3>
+</article>
+
+<style>
+  .banner,
+  .slogan {
+    width: 100%;
+    padding: 2rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .banner,
+    .slogan {
+      height: 40rem;
+    }
+  }
+
+  .banner {
+    background: var(--blanco);
+  }
+
+  .slogan {
+    background: var(--naranja);
+  }
+
+  .banner__title,
+  .slogan__title {
+    max-width: 120rem;
+    font-size: var(--font-md);
+    text-align: center;
+    line-height: 1;
+    text-shadow: 1px 1px 10px rgb(0 0 0 / 0.1);
+  }
+
+  .banner__title {
+    color: var(--negro);
+  }
+
+  .slogan__title {
+    color: transparent;
+    stroke: 1px var(--blanco);
+    -webkit-text-stroke: 1px var(--blanco);
+  }
+
+  @media (min-width: 768px) {
+    .banner__title,
+    .slogan__title {
+      font-size: var(--font-xxl);
+    }
+  }
+</style>

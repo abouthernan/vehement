@@ -1,0 +1,40 @@
+.swiperPartners {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.swiperPartners :global(.swiper-wrapper) {
+  padding: 4rem 0 8rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .swiperPartners :global(.swiper-wrapper) {
+    padding: 4rem 0 8rem;
+  }
+}
+
+.partners__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners__img {
+  width: 12rem;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+:global(.swiper-pagination-partners) {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+:global(.swiper-pagination-partners .swiper-pagination-bullet) {
+  background-color: var(--negro);
+}

@@ -31,5 +31,15 @@
   "scrollDown": "Scroll Down",
   "footer": {
     "poweredBy": "Powered by"
+  },
+  "quote": {
+    "title": "Creativity, innovation and technology.",
+    "button": "Get a quote",
+    "description": "¡In less than 5 minutes!"
+  },
+  "partners": "Our clients",
+  "banner": {
+    "textOne": "We create awesome digital products.",
+    "textTwo": "Remote First."
   }
 }

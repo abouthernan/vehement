@@ -1,0 +1,109 @@
+<section class="counter" id="counter">
+  <div class="counter__items container">
+    <div class="counter__item">
+      <h3 class="counter__number" data-val="500">0</h3>
+      <p class="counter__description">Proyects</p>
+    </div>
+
+    <div class="counter__item">
+      <h3 class="counter__number" data-val="8">0</h3>
+      <p class="counter__description">Years of experience</p>
+    </div>
+
+    <div class="counter__item">
+      <h3 class="counter__number" data-val="200">0</h3>
+      <p class="counter__description">Clients</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .counter {
+    width: 100%;
+    background-color: var(--naranja);
+  }
+
+  .counter__items {
+    height: auto;
+    padding: 3rem 0;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .counter__items {
+      justify-content: space-between;
+      height: auto;
+      padding: 6rem 0;
+    }
+  }
+
+  .counter__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter__number {
+    color: var(--blanco);
+    font-size: var(--font-md);
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .counter__number {
+      font-size: var(--font-xxl);
+    }
+  }
+
+  .counter__description {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    .counter__description {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+<script>
+  const counterSection = document.querySelector('.counter')
+  const numCounter = document.querySelectorAll('.counter__number')
+
+  const counterListener = (tickets) => {
+    tickets.forEach( ticket => {
+      if (ticket.isIntersecting) animCounter()
+    })
+  }
+
+  const observer = new IntersectionObserver(counterListener, {
+      root: null,
+      rootMargin: '10px',
+      threshold: 0.7
+  })
+
+  const animCounter = () => {
+    const interval = 2000
+    numCounter.forEach(item => {
+      let startValue = 0
+      let endValue = Number(item.getAttribute('data-val'))
+      let duration = Math.floor(interval / endValue)
+      let counter = setInterval(() => {
+        startValue += 1
+        item.textContent = startValue
+        if (startValue == endValue) clearInterval(counter)
+        if (startValue == endValue) observer.disconnect()
+      }, duration)
+
+    })
+  }
+
+  window.location.pathname.includes('services') ?  observer.disconnect() : observer.observe(counterSection)
+</script>
