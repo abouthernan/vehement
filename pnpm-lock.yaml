@@ -19,6 +19,12 @@ dependencies:
   astro-i18next:
     specifier: 1.0.0-beta.21
     version: 1.0.0-beta.21(astro@2.2.1)
+  i18next:
+    specifier: 22.4.14
+    version: 22.4.14
+  i18next-fs-backend:
+    specifier: 2.1.1
+    version: 2.1.1
   nanostores:
     specifier: 0.7.4
     version: 0.7.4

@@ -1,7 +1,6 @@
 {
   "name": "vehement",
   "private": true,
-  "types": "module",
   "description": "A simple, modern website starter for Astro. Develop by @rxtsel",
   "author": "Cristhian Melo",
   "type": "module",
@@ -20,6 +19,8 @@
     "@types/react-dom": "18.0.6",
     "astro": "2.2.1",
     "astro-i18next": "1.0.0-beta.21",
+    "i18next": "22.4.14",
+    "i18next-fs-backend": "2.1.1",
     "nanostores": "0.7.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
