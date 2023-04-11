@@ -1,0 +1,61 @@
+.burger {
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger span {
+  display: inline-block;
+  height: 2px;
+  margin: 4px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: var(--blanco);
+}
+
+.burger:hover span {
+  background-color: var(--naranja);
+}
+
+.burger__span1 {
+  width: 3.4rem;
+}
+
+.burger__span2 {
+  width: 2rem;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+:global(:has(.burger-active)) .burger__span1 {
+  transform: rotate(45deg) translateX(4px) translateY(3px);
+  background-color: var(--negro);
+}
+
+:global(:has(.burger-active)) .burger__span2 {
+  transform: rotate(-45deg) translateX(4px) translateY(-3px);
+  width: 3.4rem;
+  background-color: var(--negro);
+}
+
+:global(:has(.burger-active:hover)) .burger__span1,
+:global(:has(.burger-active:hover)) .burger__span2 {
+  background-color: var(--naranja);
+}

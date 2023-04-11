@@ -1,65 +1,27 @@
 ---
-import SwiperHero from './SwiperHero.astro'
+import { SwiperHero } from './swiper/hero/SwiperHero.tsx'
+import ScrollDown from './ScrollDown.astro'
 ---
 
 <main class="section-swiper">
-  <SwiperHero />
-
-  <div class="swiper-pagination" />
-
-  <div class="counter-bar-content">
-    <span class="counter-bar counter-bar-dinamic">01</span>
-    <span class="counter-bar">05</span>
-  </div>
-
-  <a href="#quote" class="arrow-container" title="Ir abajo">
-    <span class="arrow"></span>
-    <span class="arrow"></span>
-  </a>
-
-  <section class="social-letters">
-    <!-- <a href="#" target="_blank">Ig.</a> -->
-    <a
-      href="https://open.spotify.com/show/54jAIwVgsapPF1nb24bUex?si=DlOzPp2jTOWU_f9EIJUI4Q&dl_branch=1"
-      target="_blank"
-    >Sp.</a
-    >
-    <a
-      href="https://www.youtube.com/channel/UCJcVsaIZ83aNDvh_R9VMEJA"
-      target="_blank"
-    >Yt.</a
-    >
-  </section>
+  <SwiperHero client:load />
+  <ScrollDown />
 </main>
 
+<style>
+  .section-swiper {
+    height: 60vh;
+    display: grid;
+    place-content: center;
+    max-width: 120rem;
+    margin: -2rem auto 0 auto;
+    overflow-x: hidden;
+    position: relative;
+  }
 
-<script>
-  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-  import { $ } from '../utils'
-
-  const paginatorHero = $('.swiper-pagination')
-
-  const swiperHero = new Swiper(".mySwiper-hero", {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 15,
-    mousewheel: {
-      thresholdDelta: 40,
-    },
-    loop: true,
-    allowTouchMove: true,
-    pagination: {
-      el: paginatorHero,
-      clickable: true,
-      type: "progressbar",
-    },
-  })
-
-  // update counter
-  const current = $('.counter-bar-dinamic')
-
-  swiperHero.on('paginationUpdate', function (e: any) {
-    current.textContent = `0${e.activeIndex}`
-    e.activeIndex == 6 ? current.textContent = '01' : null
-  })
-</script>
+  @media (min-width: 768px) {
+    .section-swiper {
+      height: 100vh;
+    }
+  }
+</style>

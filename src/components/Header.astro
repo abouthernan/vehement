@@ -1,16 +1,17 @@
 ---
-import Nav from "./Nav.astro"
-import ToggleMenu from "./ToggleMenu.astro"
 import logoWhite from "../assets/img/logo-white.webp"
 import logoAnimated from "../assets/img/logo-animado.mp4"
+import Nav from "../components/Nav.astro"
+import { ToggleMenu } from "../components/burger/ToggleMenu.tsx"
 ---
 
 <header class="header container">
   <a href="/" class="header__logo">
     <img
-      loading="lazy"
       class="logo"
       src={logoWhite}
+      width={50}
+      height={50}
       alt="puede ser una imagen que contiene un logo de vehement"
     />
     <video
@@ -19,12 +20,52 @@ import logoAnimated from "../assets/img/logo-animado.mp4"
       autoplay
       loop
       muted
-      width="100"
-      height="100" />
+      width={100}
+      height={100} />
   </a>
 
   <Nav />
 
-  <ToggleMenu />
+  <ToggleMenu client:media='(max-width: 768px)' />
 
 </header>
+
+<style>
+ .header {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    z-index: 3;
+    height: 5rem;
+  }
+
+  .logo {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  
+  :global(:has(.burger-active)) .logo {
+     filter: invert(1);
+   }
+
+  .logo-desktop {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .logo {
+      display: none;
+    }
+
+    .logo-desktop {
+      display: block;
+      position: fixed;
+      top: 0;
+    }
+  } 
+</style>

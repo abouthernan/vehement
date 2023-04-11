@@ -1,0 +1,59 @@
+---
+import footerLogo from '../assets/img/footer.gif'
+---
+
+<footer class="footer">
+  <div class="footer__logo">
+    <img
+      class="footer__img"
+      src={footerLogo}
+      height={380}
+      width={690}
+      alt="puede ser una imagen animada del logo de la agencia vehement"
+    />
+  </div>
+  <p class="footer__text">
+    Powered by
+    <a class="footer__url" href="https://www.vehement.co">Vehement</a>
+  </p>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e7e5e6;
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+  .footer__logo {
+    max-width: 69rem;
+    max-height: 38rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer__img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  .footer__text {
+    margin-top: 1.5rem;
+  }
+
+  .footer__url {
+    color: var(--negro);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .footer__url:hover,
+  .social-letters a:hover {
+    color: var(--naranja);
+  }
+</style>
