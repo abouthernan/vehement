@@ -14,11 +14,11 @@
     },
     "routes": {
       "home": "/",
-      "cybersecurity": "/services/cybersecurity",
-      "design": "/services/design",
-      "marketing": "/services/marketing",
-      "develop": "/services/develop",
-      "seo": "/services/seo"
+      "cybersecurity": "./services/cybersecurity",
+      "design": "./services/design",
+      "marketing": "./services/marketing",
+      "develop": "./services/develop",
+      "seo": "./services/seo"
     },
     "description": {
       "cybersecurity": "Ethical Hacking / Forensic Informatics / WPT / Hardering\n\nAppliances / BCP / DRP / Risk Management Security / SGSI /\n\nMonitoring",
@@ -41,5 +41,60 @@
   "banner": {
     "textOne": "We create awesome digital products.",
     "textTwo": "Remote First."
+  },
+  "services": {
+    "cibersecurity": {
+      "title": "Cybersecurity",
+      "description": "Don't let cyber threats compromise your security. Protect your business with our proven cybersecurity measures.",
+      "subtitle": "ADVANCED CYBERSECURITY",
+      "copie": "Keep your data safe with our advanced cybersecurity solutions.",
+      "checks": [
+        "Ethical Hacking",
+        "Forensic Informatics",
+        "WPT",
+        "Hardering Appliances",
+        "BCP",
+        "DRP",
+        "Risk Management Security",
+        "SGSI",
+        "Monitoring"
+      ]
+    },
+    "design": {
+      "title": "Design",
+      "description": "Stand out with custom design. Unique, meaningful and effective designs to achieve your goals, let us help you to stand out and communicate your message.",
+      "subtitle": "DESIGN THAT STANDS OUT",
+      "copie": "Unleash your brand's full potential with stunning, custom designs.",
+      "checks": ["UX", "UI", "Web", "Branding", "Brand Book", "Packing"]
+    },
+    "develop": {
+      "title": "Develop",
+      "description": "Our development services offer top-notch solutions for creating innovative software, mobile apps, and web platforms that meet the unique needs of your business.",
+      "subtitle": "EXPERT SOLUTIONS FOR YOUR BUSINESS",
+      "copie": "Revolutionize your business with cutting-edge development solutions.",
+      "checks": ["Web", "E-commerce", "Apps"]
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Our marketing services are tailored to help your business achieve its specific goals through the implementation of effective strategies and tactics.",
+      "subtitle": "MARKETING THAT DRIVES RESULTS",
+      "copie": "Effective marketing strategies for reaching new heights.",
+      "checks": [
+        "Digital Strategy",
+        "Content",
+        "Social Media",
+        "Paid Social Campaigns",
+        "SEM",
+        "Email & SMS",
+        "Whatsapp"
+      ]
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Our SEO services help increase your online visibility and drive targeted traffic to your website.",
+      "subtitle": "GET FOUND ONLINE WITH OUR SEO",
+      "copie": "Unlock your online potential with our proven SEO strategies",
+      "checks": ["Optimization", "Keyword Research"]
+    }
   }
 }

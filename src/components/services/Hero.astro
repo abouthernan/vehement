@@ -1,0 +1,182 @@
+---
+import { generateSlug } from '../../utils'
+
+import cybersecurityImg from '../../../src/assets/img/services/cybersecurity.webp'
+import designImg from '../../../src/assets/img/services/design.webp'
+import marketingImg from '../../../src/assets/img/services/marketing.webp'
+import developImg from '../../../src/assets/img/services/develop.webp'
+import seoImg from '../../../src/assets/img/services/seo.webp'
+
+const IMAGES = {
+  cybersecurity: cybersecurityImg,
+  design: designImg,
+  marketing: marketingImg,
+  develop: developImg,
+  seo: seoImg
+}
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props as Props;
+---
+
+<main class="main-service container">
+  <div class="figure">
+    <img loading="lazy" class="img-service" src={IMAGES[generateSlug(title)]}
+      alt={`puede ser una imagen representativa de ${title}`} />
+    <div class="info-service">
+      <h1 class="title-service">{title}</h1>
+      <p class="description-service">{description}</p>
+    </div>
+  </div>
+  <div class="content-btn">
+    <a href="https://calendly.com/abouthernan/30min" class="btn btn-primary">Schedule a meeting</a>
+    <a href="https://quoter.vehement.co" class="btn btn-underline">Get a quote</a>
+  </div>
+</main>
+
+<style>
+  .main-service {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .figure {
+    width: 100%;
+    height: 48rem;
+    position: relative;
+    box-shadow: inset 0px 0 25px 10px rgb(0 0 0 / 10%);
+    margin-bottom: 4rem;
+  }
+
+  .img-service {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+  }
+
+  .info-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 2rem;
+  }
+
+  .title-service {
+    font-size: 6rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--blanco);
+    line-height: 1;
+  }
+
+  .description-service {
+    color: var(--blanco);
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-secondary);
+  }
+
+  .btn {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-decoration: none;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--naranja);
+    cursor: pointer;
+  }
+
+  .content-btn {
+    padding-bottom: 16rem;
+  }
+
+  .btn-primary {
+    background: var(--naranja);
+    color: var(--blanco);
+  }
+
+  .btn-primary:hover {
+    background: #99481c;
+    border: 1px solid #99481c;
+  }
+
+  .btn-underline {
+    border: 1px solid var(--naranja);
+    color: var(--naranja);
+    margin-top: 1.5rem;
+  }
+
+  .btn-underline:hover {
+    box-shadow: inset 0 0 8px #ea712f;
+  }
+
+  @media (min-width: 768px) {
+    .figure {
+      max-width: 90rem;
+      max-height: 48rem;
+      margin: auto;
+    }
+
+    .img-service {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .title-service {
+      font-size: var(--font-xxl);
+      font-weight: 700;
+      line-height: 0;
+    }
+
+    .info-service {
+      margin-top: -5rem;
+      padding: 0 2rem;
+    }
+
+    .description-service {
+      margin-top: 2rem;
+      max-width: 60rem;
+    }
+
+    .content-btn {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 60rem;
+      width: 100%;
+      gap: 2rem;
+      margin-top: 15rem;
+      padding-bottom: unset;
+    }
+
+    .btn {
+      max-width: 30rem;
+      margin: auto;
+    }
+  }
+</style>

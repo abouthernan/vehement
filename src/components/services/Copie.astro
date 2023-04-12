@@ -1,0 +1,125 @@
+---
+export interface Props {
+  subtitle: string;
+  copie: string;
+  checks: object;
+}
+
+const { subtitle, copie, checks } = Astro.props as Props;
+---
+
+<section class="section-two">
+  <div class="container">
+
+    <h3 class="subservicios-cat">{subtitle}</h3>
+    <h2 class="subservicios-title">{copie}</h2>
+
+    <ul class="subservicios-list">
+      {checks.map((check) => (
+        <li class="subservicios-item">{check}</li>
+      ))}
+    </ul>
+
+  </div>
+
+  <div class="content-svg">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+      class="custom-bg-dark2">
+      <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="custom-bg-dark1"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .section-two {
+    background: var(--gris-oscuro);
+    position: relative;
+  }
+
+  .content-svg {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .section-two svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 5rem;
+    transform: rotateY(180deg);
+  }
+
+  .section-two svg path {
+    fill: var(--negro);
+    background-color: var(--negro);
+  }
+
+  .subservicios-cat {
+    color: var(--naranja);
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+  }
+
+  .subservicios-title {
+    font-size: 4rem;
+    line-height: 41.15px;
+    font-weight: 600;
+    color: var(--blanco);
+    text-align: left;
+    padding: 0 2rem;
+  }
+
+  .subservicios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    list-style: none;
+    padding-bottom: 2rem;
+  }
+
+  .subservicios-item {
+    color: var(--blanco);
+    position: relative;
+    font-size: 1.8rem;
+  }
+
+  .subservicios-item::before {
+    content: "✓";
+    color: var(--naranja);
+    display: inline-block;
+    width: 1rem;
+    position: absolute;
+    margin-left: -2rem;
+  }
+
+  @media (min-width: 768px) {
+    .subservicios-cat {
+      padding-top: 10rem;
+    }
+
+    .subservicios-cat {
+      text-align: center;
+      margin: auto;
+    }
+
+    .subservicios-title {
+      font-size: 8rem;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .subservicios-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 10rem auto;
+      place-items: center;
+    }
+  }
+</style>

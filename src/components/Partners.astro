@@ -1,4 +1,8 @@
 ---
+export interface Props {
+  isBlack: boolean 
+}
+
 import { t } from 'i18next'
 import { SwiperPartners } from './swiper/partners/SwiperPartners.tsx'
 import partners from '../assets/data/partners.json'
@@ -25,9 +29,22 @@ const IMAGES = {
 }
 
 const swiperPartnersData = concatImgToObject(partners, IMAGES)
+
+const { isBlack } = Astro.props as Props
 ---
+
 <section class="partners">
-  <h2 class="partners__title">{t("partners")}</h2> 
+  <h2
+    class={`partners__title ${isBlack ? 'partners__title--invert' : ''}`}
+  >
+    {!isBlack && t("partners")}
+    {isBlack && (
+      <h2 class="title-customer">
+        Customers who trust us
+        <span class="title-customer--orange">all over the world</span>
+      </h2>
+    )}
+  </h2> 
   <SwiperPartners client:visible data={swiperPartnersData}  />
 </section>
 
@@ -43,8 +60,33 @@ const swiperPartnersData = concatImgToObject(partners, IMAGES)
     padding-top: 4rem;
   }
 
+  .partners__title.partners__title--invert {
+    filter: invert(1);
+  }
+
+  :global(:has(.partners__title--invert)) .partners {
+    background-color: var(--negro);
+  }
+
+  .title-customer {
+    color: var(--blanco);
+    font-size: 4rem;
+    text-align: center;
+    word-break: break-word;
+    white-space: pre-line;
+    margin-top: -3rem;
+  }
+
+  .title-customer--orange {
+    color: var(--naranja);
+  }
+
   @media (min-width: 768px) {
     .partners__title {
+      font-size: 8rem;
+    }
+
+    .title-customer {
       font-size: 8rem;
     }
   } 

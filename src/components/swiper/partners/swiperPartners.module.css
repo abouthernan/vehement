@@ -28,6 +28,10 @@
   object-fit: contain;
 }
 
+:global(:has(.partners__title--invert)) .partners__img {
+  filter: invert(1);
+}
+
 :global(.swiper-pagination-partners) {
   display: block;
   margin: auto;
@@ -37,4 +41,12 @@
 
 :global(.swiper-pagination-partners .swiper-pagination-bullet) {
   background-color: var(--negro);
+}
+
+:global(
+    :has(.partners__title--invert)
+      .swiper-pagination-partners
+      .swiper-pagination-bullet
+  ) {
+  background-color: var(--naranja);
 }

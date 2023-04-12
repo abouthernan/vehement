@@ -8,3 +8,11 @@ export const concatImgToObject = (obj, images) => obj.map(item => (
     img: images[hyphenToUnderscore(item.slug)]
   } 
 ))
+
+export const generateSlug = service => {
+  return service 
+    .toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]+/g, '')
+    .trim()
+}

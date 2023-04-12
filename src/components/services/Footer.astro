@@ -1,0 +1,45 @@
+---
+import footerImg from '../../../src/assets/img/footer.png'
+---
+
+<footer class="footer footer-service">
+  <a href="https://vehement.co" class="footer__content-img">
+    <img class="footer__img" src={footerImg} alt="puede ser una imagen del logo de vehement en color blanco">
+  </a>
+</footer>
+
+<style>
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e7e5e6;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.footer-service {
+  background: var(--negro);
+}
+
+.footer-service a {
+  text-decoration: none;
+}
+
+.footer__content-img {
+  width: 13rem;
+}
+
+.footer__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .footer__content-img {
+    width: 15rem;
+  }
+}
+</style>
