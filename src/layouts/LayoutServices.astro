@@ -1,12 +1,12 @@
 ---
-import i18next from "i18next"
-import { HeadHrefLangs } from "astro-i18next/components";
-import '../assets/css/normalize.css'
-import favicon from '/favicon.svg'
-
 export interface Props {
   title: string
 }
+
+import '../assets/css/normalize.css'
+import i18next from "i18next"
+import { HeadHrefLangs } from "astro-i18next/components"
+import favicon from '/favicon.svg'
 
 const { title } = Astro.props as Props
 ---

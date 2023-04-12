@@ -6,24 +6,19 @@ export interface Props {
 }
 
 const { subtitle, copie, checks } = Astro.props as Props
-
 const checksFormatted = checks.split(" * ")
 ---
 
 <section class="section-two">
   <div class="container">
-
     <h3 class="subservicios-cat">{subtitle}</h3>
     <h2 class="subservicios-title">{copie}</h2>
-
     <ul class="subservicios-list">
       {checksFormatted.map((check) => (
         <li class="subservicios-item">{check}</li>
       ))}
     </ul>
-
   </div>
-
   <div class="content-svg">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
       class="custom-bg-dark2">

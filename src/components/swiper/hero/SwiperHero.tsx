@@ -17,6 +17,12 @@ export interface Data {
 }
 
 export function SwiperHero({ data }: SwiperHeroProps) {
+  const onUpdate = (e: any) => {
+    const counterBar = document.querySelector('.counter-bar-dinamic')
+    if (counterBar === null) return
+    counterBar.textContent = `0${e.realIndex + 1}`
+    e.activeIndex == 6 ? counterBar.textContent = '01' : null
+  }
   return (
     <>
       <Swiper
@@ -35,12 +41,7 @@ export function SwiperHero({ data }: SwiperHeroProps) {
         grabCursor
         modules={[Pagination, Mousewheel]}
         className={styles.swiperHero}
-        onPaginationUpdate={e => {
-          const counterBar = document.querySelector('.counter-bar-dinamic')
-          if (counterBar === null) return
-          counterBar.textContent = `0${e.realIndex + 1}`
-          e.activeIndex == 6 ? counterBar.textContent = '01' : null
-        }}
+        onPaginationUpdate={e => onUpdate(e)}
       >
         {data.map(({ url, img, name, description }, index) => (
           <SwiperSlide

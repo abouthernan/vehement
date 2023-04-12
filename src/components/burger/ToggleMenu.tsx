@@ -1,5 +1,5 @@
 import styles from './toggleMenu.module.css'
-import { useStore } from '@nanostores/react';
+import { useStore } from '@nanostores/react'
 import { toggle, isMenuOpen } from '../../stores/menuStore'
 
 export function ToggleMenu() {
@@ -15,5 +15,5 @@ export function ToggleMenu() {
       <span className={styles.burger__span1} />
       <span className={styles.burger__span2} />
     </button>
-  );
+  )
 }
