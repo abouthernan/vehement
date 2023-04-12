@@ -1,21 +1,21 @@
 ---
-import { t, changeLanguage } from "i18next"
-import LayoutServices from "../../layouts/LayoutServices.astro"
-import Hero from "../../components/services/Hero.astro"
-import Header from "../../components/Header.astro"
-import Copie from "../../components/services/Copie.astro"
-import Partners from "../../components/Partners.astro"
-import Footer from "../../components/services/Footer.astro"
+import { t, changeLanguage } from "i18next";
+import LayoutServices from "../../layouts/LayoutServices.astro";
+import Hero from "../../components/services/Hero.astro";
+import Header from "../../components/Header.astro";
+import Copie from "../../components/services/Copie.astro";
+import Partners from "../../components/Partners.astro";
+import Footer from "../../components/services/Footer.astro";
 
-changeLanguage("es")
+changeLanguage("es");
 
-const title = t("services.design.title")
-const description = t("services.design.description")
-const meeting = t("services.meeting")
-const quote = t("quote.button")
-const subtitle = t("services.design.subtitle")
-const copie = t("services.design.copie")
-const checks = t("services.design.checks")
+const title = t("services.design.title");
+const description = t("services.design.description");
+const meeting = t("services.meeting");
+const quote = t("quote.button");
+const subtitle = t("services.design.subtitle");
+const copie = t("services.design.copie");
+const checks = t("services.design.checks");
 ---
 
 <LayoutServices title={title}>
