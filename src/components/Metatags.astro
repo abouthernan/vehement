@@ -1,0 +1,19 @@
+---
+import { t } from 'i18next'
+import metatagImage from '../assets/img/meta_tags_large_icon.png'
+---
+
+<meta name="title" content={t("site.title")}>
+<meta name="description" content={t("site.description")}>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content={t("site.url")}>
+<meta property="og:title" content={t("site.title")}>
+<meta property="og:description" content={t("site.description")}>
+<meta property="og:image" content={metatagImage}>
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content={t("site.url")}>
+<meta property="twitter:title" content={t("site.title")}>
+<meta property="twitter:description" content={t("site.description")}>
+<meta property="twitter:image" content={metatagImage}>
