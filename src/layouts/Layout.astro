@@ -6,7 +6,6 @@ export interface Props {
 import '../assets/css/normalize.css'
 import i18next from "i18next"
 import { HeadHrefLangs } from "astro-i18next/components";
-import Metatags from '../components/Metatags.astro'
 
 const { title } = Astro.props
 ---
@@ -20,7 +19,6 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <HeadHrefLangs />
-    <Metatags />
     <link rel="sitemap" href="sitemap-index.xml">
   </head>
   <body>
