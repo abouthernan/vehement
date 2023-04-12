@@ -4,6 +4,7 @@ import logoWhite from "../assets/img/logo-white.webp"
 import logoAnimated from "../assets/img/logo-animado.mp4"
 import Nav from "../components/Nav.astro"
 import { ToggleMenu } from "../components/burger/ToggleMenu.tsx"
+import ToggleLang from "../components/ToggleLang.astro"
 ---
 
 <header class="header container">
@@ -22,8 +23,12 @@ import { ToggleMenu } from "../components/burger/ToggleMenu.tsx"
       loop
       muted
       width={100}
-      height={100} />
+      height={100}
+    />
+
   </a>
+
+  <ToggleLang />
 
   <Nav />
 
