@@ -14,11 +14,11 @@
     },
     "routes": {
       "home": "/en",
-      "cybersecurity": "./en/services/cybersecurity",
-      "design": "./en/services/design",
-      "marketing": "./en/services/marketing",
-      "develop": "./en/services/develop",
-      "seo": "./en/services/seo"
+      "cybersecurity": "./services/cybersecurity",
+      "design": "./services/design",
+      "marketing": "./services/marketing",
+      "develop": "./services/develop",
+      "seo": "./services/seo"
     },
     "description": {
       "cybersecurity": "Ethical Hacking / Forensic Informatics / WPT / Hardering\n\nAppliances / BCP / DRP / Risk Management Security / SGSI /\n\nMonitoring",
