@@ -1,18 +1,22 @@
+---
+import { t } from 'i18next'
+---
+
 <section class="counter" id="counter">
   <div class="counter__items container">
     <div class="counter__item">
       <h3 class="counter__number" data-val="500">0</h3>
-      <p class="counter__description">Proyects</p>
+      <p class="counter__description">{t("counter.projects")}</p>
     </div>
 
     <div class="counter__item">
       <h3 class="counter__number" data-val="8">0</h3>
-      <p class="counter__description">Years of experience</p>
+      <p class="counter__description">{t("counter.years")}</p>
     </div>
 
     <div class="counter__item">
       <h3 class="counter__number" data-val="200">0</h3>
-      <p class="counter__description">Clients</p>
+      <p class="counter__description">{t("counter.clients")}</p>
     </div>
   </div>
 </section>

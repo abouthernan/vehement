@@ -4,6 +4,7 @@ export interface Props {
 }
 
 import { t } from 'i18next'
+import { Trans } from "astro-i18next/components";
 import { SwiperPartners } from './swiper/partners/SwiperPartners.tsx'
 import partners from '../assets/data/partners.json'
 import { concatImgToObject } from '../utils'
@@ -39,10 +40,12 @@ const { isBlack } = Astro.props as Props
   >
     {!isBlack && t("partners")}
     {isBlack && (
-      <h2 class="title-customer">
-        Customers who trust us
-        <span class="title-customer--orange">all over the world</span>
-      </h2>
+      <Trans i18nKey="services.partners">
+        <h2 class="title-customer">
+          Customers who trust us
+          <span class="title-customer--orange">all over the world</span>
+        </h2>
+      </Trans>
     )}
   </h2> 
   <SwiperPartners client:visible data={swiperPartnersData}  />

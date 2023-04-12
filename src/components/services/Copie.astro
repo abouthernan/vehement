@@ -1,11 +1,13 @@
 ---
 export interface Props {
-  subtitle: string;
-  copie: string;
-  checks: object;
+  subtitle: string
+  copie: string
+  checks: object
 }
 
-const { subtitle, copie, checks } = Astro.props as Props;
+const { subtitle, copie, checks } = Astro.props as Props
+
+const checksFormatted = checks.split(" * ")
 ---
 
 <section class="section-two">
@@ -15,7 +17,7 @@ const { subtitle, copie, checks } = Astro.props as Props;
     <h2 class="subservicios-title">{copie}</h2>
 
     <ul class="subservicios-list">
-      {checks.map((check) => (
+      {checksFormatted.map((check) => (
         <li class="subservicios-item">{check}</li>
       ))}
     </ul>

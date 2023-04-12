@@ -6,18 +6,11 @@ import 'swiper/css/pagination'
 import 'swiper/css/mousewheel'
 
 export interface SwiperHeroProps {
-  data: Root
-}
-
-export interface Root {
-  cybersecurity: Data
-  design: Data
-  marketing: Data
-  develop: Data
-  seo: Data
+  data: Data[]
 }
 
 export interface Data {
+  name: string
   url: string
   img: string
   description: string
@@ -49,25 +42,22 @@ export function SwiperHero({ data }: SwiperHeroProps) {
           e.activeIndex == 6 ? counterBar.textContent = '01' : null
         }}
       >
-        {Object.entries(data).map(([key, value]) => (
+        {data.map(({ url, img, name, description }, index) => (
           <SwiperSlide
-            key={key}
+            key={index}
           >
-            <a className={styles.swiper__content} href={value.url}>
+            <a className={styles.swiper__content} href={url}>
               <img
                 loading="lazy"
                 className={styles.swiper__img}
-                src={value.img}
-                alt={`puede ser una imagen de ${key.split('_').join(' ')}`}
+                src={img}
+                alt={`puede ser una imagen de ${name}`}
               />
               <article className={styles.swiper__info}>
                 <h2 className={styles.swiper__title}>
-                    {key.includes('_')
-                      ? key.split('_').join(' ')
-                      : key
-                    }
+                    {name}
                 </h2>
-                <p className={styles.swiper__description}>{value.description}</p>
+                <p className={styles.swiper__description}>{description}</p>
               </article>
             </a>
           </SwiperSlide>

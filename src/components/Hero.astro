@@ -10,33 +10,38 @@ import marketingImg from '../assets/img/services/marketing.webp'
 import developImg from '../assets/img/services/develop.webp'
 import seoImg from '../assets/img/services/seo.webp'
 
-const swiperHeroData = {
-  cybersecurity: {
+const swiperHeroData = [
+ {
+    name: t("menu.nav.cybersecurity"),
     url: t("menu.routes.cybersecurity"),
     img: cybersecurityImg,
     description: t("menu.description.cybersecurity")
+ },
+ {
+  name: t("menu.nav.design"),
+  url: t("menu.routes.design"),
+  img: designImg,
+  description: t("menu.description.design")
   },
-  design: {
-    url: t("menu.routes.design"),
-    img: designImg,
-    description: t("menu.description.design")
-  },
-  marketing: {
+  {
+    name: t("menu.nav.marketing"),
     url: t("menu.routes.marketing"),
     img: marketingImg,
     description: t("menu.description.marketing")
   },
-  develop: {
+  {
+    name: t("menu.nav.develop"),
     url: t("menu.routes.develop"),
     img: developImg,
     description: t("menu.description.develop")
   },
-  seo: {
+  {
+    name: t("menu.nav.seo"),
     url: t("menu.routes.seo"),
     img: seoImg,
     description: t("menu.description.seo")
   }
-}
+]
 ---
 
 <main class="section-swiper">

@@ -13,6 +13,6 @@ export const generateSlug = service => {
   return service 
     .toLowerCase()
     .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '')
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .trim()
 }

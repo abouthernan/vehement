@@ -1,0 +1,27 @@
+---
+import { t, changeLanguage } from "i18next";
+import LayoutServices from "../../../layouts/LayoutServices.astro";
+import Hero from "../../../components/services/Hero.astro";
+import Header from "../../../components/Header.astro";
+import Copie from "../../../components/services/Copie.astro";
+import Partners from "../../../components/Partners.astro";
+import Footer from "../../../components/services/Footer.astro";
+
+changeLanguage("en");
+
+const title = t("services.marketing.title");
+const description = t("services.marketing.description");
+const meeting = t("services.meeting");
+const quote = t("quote.button");
+const subtitle = t("services.marketing.subtitle");
+const copie = t("services.marketing.copie");
+const checks = t("services.marketing.checks");
+---
+
+<LayoutServices title={title}>
+  <Header />
+  <Hero title={title} description={description} quote={quote} meeting={meeting} />
+  <Copie subtitle={subtitle} copie={copie} checks={checks} />
+  <Partners isBlack={true}/>
+  <Footer />
+</LayoutServices>

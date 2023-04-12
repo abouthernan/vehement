@@ -1,4 +1,5 @@
 ---
+import i18next from "i18next";
 import { generateSlug } from '../../utils'
 
 import cybersecurityImg from '../../../src/assets/img/services/cybersecurity.webp'
@@ -7,7 +8,7 @@ import marketingImg from '../../../src/assets/img/services/marketing.webp'
 import developImg from '../../../src/assets/img/services/develop.webp'
 import seoImg from '../../../src/assets/img/services/seo.webp'
 
-const IMAGES = {
+const IMAGES_EN = {
   cybersecurity: cybersecurityImg,
   design: designImg,
   marketing: marketingImg,
@@ -15,12 +16,25 @@ const IMAGES = {
   seo: seoImg
 }
 
+const IMAGES_ES = {
+  ciberseguridad: cybersecurityImg,
+  diseno: designImg,
+  marketing: marketingImg,
+  desarrollo: developImg,
+  seo: seoImg
+}
+
+const lang = i18next.language
+const IMAGES = lang === 'es' ? IMAGES_ES : IMAGES_EN
+
 export interface Props {
   title: string;
   description: string;
+  meeting: string;
+  quote: string;
 }
 
-const { title, description } = Astro.props as Props;
+const { title, description, meeting, quote } = Astro.props as Props
 ---
 
 <main class="main-service container">
@@ -33,8 +47,8 @@ const { title, description } = Astro.props as Props;
     </div>
   </div>
   <div class="content-btn">
-    <a href="https://calendly.com/abouthernan/30min" class="btn btn-primary">Schedule a meeting</a>
-    <a href="https://quoter.vehement.co" class="btn btn-underline">Get a quote</a>
+    <a href="https://calendly.com/abouthernan/30min" class="btn btn-primary">{meeting}</a>
+    <a href="https://quoter.vehement.co" class="btn btn-underline">{quote}</a>
   </div>
 </main>
 
