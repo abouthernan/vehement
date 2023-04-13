@@ -1,0 +1,39 @@
+---
+import mapImg from '../assets/img/maps.webp'
+---
+
+<section class="locations">
+  <div class="locations__content container">
+    <img
+      loading="lazy"
+      src={mapImg}
+      alt="pude ser una imagen de un mapa mundial con puntos en colombia españa y turquía"
+      class="locations__img"
+    />
+  </div>
+</section>
+
+<style>
+.locations {
+  background: var(--blanco);
+}
+
+.locations__content {
+  max-width: 100rem;
+  max-height: 100rem;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+}
+
+.locations__img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 480px) {
+  .locations__img {
+    transform: scale(1.2);
+  }
+}
+</style>
