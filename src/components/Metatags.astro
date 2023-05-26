@@ -17,3 +17,13 @@ import metatagImage from '../assets/img/meta_tags_large_icon.png'
 <meta property="twitter:title" content={t("site.title")}>
 <meta property="twitter:description" content={t("site.description")}>
 <meta property="twitter:image" content={metatagImage}>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTNRCRL5YM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HTNRCRL5YM');
+</script>
