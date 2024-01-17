@@ -10,6 +10,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "i18n:generate": "npx astro-i18next generate",
     "astro": "astro"
   },
   "dependencies": {
