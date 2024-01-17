@@ -1,7 +1,8 @@
 {
   "site": {
-    "title": "Vehement Agency",
-    "description": "vehement"
+    "title": "Vehement",
+    "description": "At our agency, we offer a wide variety of digital services including marketing, web development, graphic design, SEO, and cybersecurity to meet all your digital needs. We work closely with our clients to create customized solutions that enhance their online presence and increase their success in the digital marketplace. Our team of technology experts is dedicated to providing exceptional service and an unparalleled customer experience. Trust us to take your business to the next level!",
+    "url": "https://vehement.co/en/"
   },
   "menu": {
     "nav": {
@@ -14,14 +15,14 @@
     },
     "routes": {
       "home": "/en",
-      "cybersecurity": "./en/services/cybersecurity",
-      "design": "./en/services/design",
-      "marketing": "./en/services/marketing",
-      "develop": "./en/services/develop",
-      "seo": "./en/services/seo"
+      "cybersecurity": "./services/cybersecurity",
+      "design": "./services/design",
+      "marketing": "./services/marketing",
+      "develop": "./services/develop",
+      "seo": "./services/seo"
     },
     "description": {
-      "cybersecurity": "Ethical Hacking / Forensic Informatics / WPT / Hardering\n\nAppliances / BCP / DRP / Risk Management Security / SGSI /\n\nMonitoring",
+      "cybersecurity": "Ethical Hacking / Forensic Informatics / WPT / Hardering\n\nAppliances / BCP / DRP / Risk Management Security / SGSI /\n\nMonitoring / Threat Intelligence",
       "design": "UX / UI / Web / Branding / Brand Book / Packing",
       "marketing": "Digital Strategy / Content / Social Media / Paid Social\n\nCampaigns / SEM / Email & SMS / Whatsapp",
       "develop": "Web / E-commerce / Apps",

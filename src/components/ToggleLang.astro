@@ -1,7 +1,7 @@
 ---
-import i18next from "i18next";
-const lang = i18next.language;
-const titleLabel = lang === "es" ? "lenguaje" : "language";
+import i18next from "i18next"
+const lang = i18next.language
+const titleLabel = lang === "es" ? "lenguaje" : "language"
 ---
 
 <button class="switch" title={titleLabel}>
@@ -166,7 +166,7 @@ input.check-toggle-round-flat:checked + label:after {
     toggle.addEventListener('change', () => {
       const isEnglish = toggle.checked
       setTimeout(() => {
-        isEnglish ? window.location.href = '/vehement/en' : window.location.href = '/vehement'
+        isEnglish ? window.location.href = '/en' : window.location.href = '/'
       }, 200)
     })
   })

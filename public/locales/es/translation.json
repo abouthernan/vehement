@@ -1,7 +1,8 @@
 {
   "site": {
-    "title": "Vehement Agencia",
-    "description": "vehement"
+    "title": "Vehement",
+    "description": "En nuestra agencia, ofrecemos una amplia variedad de servicios de marketing, desarrollo web, diseño gráfico, SEO y ciberseguridad para satisfacer todas tus necesidades digitales. Trabajamos en estrecha colaboración con nuestros clientes para crear soluciones personalizadas que impulsen su presencia en línea y aumenten su éxito en el mercado digital. Nuestro equipo de expertos en tecnología se dedica a proporcionar un servicio excepcional y una experiencia del cliente inigualable. ¡Confía en nosotros para llevar tu negocio al siguiente nivel!",
+    "url": "https://vehement.co/"
   },
   "menu": {
     "nav": {
@@ -21,7 +22,7 @@
       "seo": "./servicios/seo"
     },
     "description": {
-      "cybersecurity": "Hacking ético / Informática forense / WPT / Fortalecimiento de seguridad\n\nAplicaciones / BCP / DRP / Gestión de riesgos de seguridad / SGSI /\n\nMonitoreo",
+      "cybersecurity": "Hacking ético / Informática forense / WPT / Fortalecimiento de seguridad\n\nAplicaciones / BCP / DRP / Gestión de riesgos de seguridad / SGSI /\n\nMonitoreo / Inteligencia de amenazas",
       "design": "UX / UI / Web / Branding / Libro de marca / Empaque",
       "marketing": "Estrategia digital / Contenido / Redes sociales / Campañas sociales\n\nPagas / SEM / Correo electrónico y SMS / Whatsapp",
       "develop": "Web / Comercio electrónico / Aplicaciones",
@@ -34,13 +35,13 @@
   },
   "quote": {
     "title": "Creatividad, innovación y tecnología.",
-    "button": "Obtener una cotización",
+    "button": "Obtén una cotización",
     "description": "¡En menos de 5 minutos!"
   },
   "partners": "Nuestros clientes",
   "banner": {
     "textOne": "Creamos productos digitales increíbles.",
-    "textTwo": "Primero a distancia."
+    "textTwo": "Trabajamos desde cualquier lugar del mundo."
   },
   "counter": {
     "projects": "Proyectos",
@@ -48,7 +49,7 @@
     "clients": "Clientes"
   },
   "team": {
-    "title": "Somos personas creativas"
+    "title": "Nuestra manada"
   },
   "services": {
     "cibersecurity": {
@@ -87,6 +88,6 @@
       "checks": "Optimización * Investigación de palabras clave"
     },
     "meeting": "Programar una reunión",
-    "partners": "<0>Clientes que confían en nosotros\n<1>en todo el mundo</1></0>"
+    "partners": "<0>Ellos confían en\n<1>nosotros</1></0>"
   }
 }

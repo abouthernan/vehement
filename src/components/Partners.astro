@@ -4,7 +4,7 @@ export interface Props {
 }
 
 import { t } from 'i18next'
-import { Trans } from "astro-i18next/components";
+import { Trans } from "astro-i18next/components"
 import { SwiperPartners } from './swiper/partners/SwiperPartners.tsx'
 import partners from '../assets/data/partners.json'
 import { concatImgToObject } from '../utils'
@@ -17,16 +17,21 @@ import perez_lara from '../assets/img/clients/perez-lara.png'
 import purezza from '../assets/img/clients/purezza.png'
 import waterlogic from '../assets/img/clients/waterlogic.png'
 import wearetop from '../assets/img/clients/wearetop.png'
+import glacial from '../assets/img/clients/glacial.png'
+import redegas_domiciliario from '../assets/img/clients/redegas-domiciliario.png'
+import pardo_y_asociados from '../assets/img/clients/pardo-y-asociados.png'
 
 const IMAGES = {
-  dra_aura_ruiz,
   gear_electric,
   hotel_clarion,
   nextgen_soluciones,
   perez_lara,
   purezza,
   waterlogic,
-  wearetop
+  wearetop,
+  glacial,
+  redegas_domiciliario,
+  pardo_y_asociados,
 }
 
 const swiperPartnersData = concatImgToObject(partners, IMAGES)
