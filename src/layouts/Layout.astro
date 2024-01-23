@@ -7,6 +7,7 @@ import '../assets/css/normalize.css'
 import i18next from "i18next"
 import { HeadHrefLangs } from "astro-i18next/components";
 import Metatags from '../components/Metatags.astro'
+import Whatsapp from '../components/Whatsapp.astro'
 
 const { title } = Astro.props
 ---
@@ -25,6 +26,7 @@ const { title } = Astro.props
   </head>
   <body>
     <slot />
+    <Whatsapp />
   </body>
 </html>
 
