@@ -1,8 +1,8 @@
 {
   "name": "vehement",
   "private": true,
-  "description": "A simple, modern website starter for Astro. Develop by @rxtsel",
-  "author": "Cristhian Melo",
+  "description": "A simple, modern website starter for Astro",
+  "author": "Vehement",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
