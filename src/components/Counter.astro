@@ -1,5 +1,6 @@
 ---
-import { t } from 'i18next'
+import { t } from 'i18next';
+import CounterScript from './CounterScript.astro';
 ---
 
 <section class="counter" id="counter">
@@ -19,6 +20,7 @@ import { t } from 'i18next'
       <p class="counter__description">{t("counter.clients")}</p>
     </div>
   </div>
+  <CounterScript />
 </section>
 
 <style>
@@ -52,62 +54,4 @@ import { t } from 'i18next'
     align-items: center;
   }
 
-  .counter__number {
-    color: var(--blanco);
-    font-size: var(--font-md);
-    font-weight: 700;
-  }
-
-  @media (min-width: 768px) {
-    .counter__number {
-      font-size: var(--font-xxl);
-    }
-  }
-
-  .counter__description {
-    color: var(--blanco);
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
-
-  @media (min-width: 768px) {
-    .counter__description {
-      font-size: 2.5rem;
-    }
-  }
-</style>
-
-<script>
-  const counterSection = document.querySelector('.counter')
-  const numCounter = document.querySelectorAll('.counter__number')
-
-  const counterListener = (tickets) => {
-    tickets.forEach( ticket => {
-      if (ticket.isIntersecting) animCounter()
-    })
-  }
-
-  const observer = new IntersectionObserver(counterListener, {
-      root: null,
-      rootMargin: '10px',
-      threshold: 0.7
-  })
-
-  const animCounter = () => {
-    const interval = 2000
-    numCounter.forEach(item => {
-      let startValue = 0
-      let endValue = Number(item.getAttribute('data-val'))
-      let duration = Math.floor(interval / endValue)
-      let counter = setInterval(() => {
-        startValue += 1
-        item.textContent = startValue
-        if (startValue == endValue) clearInterval(counter)
-        if (startValue == endValue) observer.disconnect()
-      }, duration)
-
-    })
-  }
-
-  window.location.pathname.includes('services') ?  observer.disconnect() : observer.observe(counterSection)
-</script>
+  .counter__nu
