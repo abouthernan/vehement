@@ -1,6 +1,5 @@
 ---
 import { t } from 'i18next';
-import CounterScript from './CounterScript.astro';
 ---
 
 <section class="counter" id="counter">
@@ -89,7 +88,8 @@ import CounterScript from './CounterScript.astro';
         const updateCount = () => {
           const target = +counter.getAttribute('data-val');
           const count = +counter.innerText;
-          const increment = target / 200; // Adjust the speed
+          const speed = 200; // duration of animation in ms
+          const increment = target / speed;
 
           if (count < target) {
             counter.innerText = Math.ceil(count + increment);
