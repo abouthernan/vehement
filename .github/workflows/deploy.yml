@@ -24,6 +24,9 @@ jobs:
           npm install -g pnpm
           pnpm install
 
+      - name: Run lint
+        run: pnpm run lint
+
       - name: Run build
         run: pnpm build
 
