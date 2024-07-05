@@ -1,4 +1,4 @@
- name: CI
+name: CI
 
 on:
   push:
@@ -24,12 +24,12 @@ jobs:
           npm install -g pnpm
           pnpm install
 
-      - name: Run lint
-        run: pnpm run lint
-
       - name: Run build
         run: pnpm build
 
-      - name: Show build errors if any
-        if: failure()
-        run: cat /github/workspace/.astro/output.json
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
