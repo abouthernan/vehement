@@ -1,0 +1,93 @@
+{
+  "site": {
+    "title": "Vehement",
+    "description": "En nuestra agencia, ofrecemos una amplia variedad de servicios de marketing, desarrollo web, diseño gráfico, SEO y ciberseguridad para satisfacer todas tus necesidades digitales. Trabajamos en estrecha colaboración con nuestros clientes para crear soluciones personalizadas que impulsen su presencia en línea y aumenten su éxito en el mercado digital. Nuestro equipo de expertos en tecnología se dedica a proporcionar un servicio excepcional y una experiencia del cliente inigualable. ¡Confía en nosotros para llevar tu negocio al siguiente nivel!",
+    "url": "https://vehement.co/"
+  },
+  "menu": {
+    "nav": {
+      "home": "Inicio",
+      "cybersecurity": "Ciberseguridad",
+      "design": "Diseño",
+      "marketing": "Marketing",
+      "develop": "Desarrollo",
+      "seo": "SEO"
+    },
+    "routes": {
+      "home": "/",
+      "cybersecurity": "./servicios/ciberseguridad",
+      "design": "./servicios/diseno",
+      "marketing": "./servicios/marketing",
+      "develop": "./servicios/desarrollo",
+      "seo": "./servicios/seo"
+    },
+    "description": {
+      "cybersecurity": "Hacking ético / Informática forense / WPT / Fortalecimiento de seguridad\n\nAplicaciones / BCP / DRP / Gestión de riesgos de seguridad / SGSI /\n\nMonitoreo / Inteligencia de amenazas",
+      "design": "UX / UI / Web / Branding / Libro de marca / Empaque",
+      "marketing": "Estrategia digital / Contenido / Redes sociales / Campañas sociales\n\nPagas / SEM / Correo electrónico y SMS / Whatsapp",
+      "develop": "Web / Comercio electrónico / Aplicaciones",
+      "seo": "Optimización / Investigación de palabras clave"
+    }
+  },
+  "scrollDown": "Desplácese hacia abajo",
+  "footer": {
+    "poweredBy": "Desarrollado por"
+  },
+  "quote": {
+    "title": "Creatividad, innovación y tecnología.",
+    "button": "Obtén una cotización",
+    "description": "¡En menos de 5 minutos!"
+  },
+  "partners": "Nuestros clientes",
+  "banner": {
+    "textOne": "Creamos productos digitales increíbles.",
+    "textTwo": "Trabajamos desde cualquier lugar del mundo."
+  },
+  "counter": {
+    "projects": "Proyectos",
+    "years": "Años de experiencia",
+    "clients": "Clientes"
+  },
+  "team": {
+    "title": "Nuestra manada"
+  },
+  "services": {
+    "cibersecurity": {
+      "title": "Ciberseguridad",
+      "description": "No permita que las amenazas cibernéticas comprometan su seguridad. Proteja su negocio con nuestras medidas de ciberseguridad comprobadas.",
+      "subtitle": "CIBERSEGURIDAD AVANZADA",
+      "copie": "Mantenga sus datos seguros con nuestras soluciones avanzadas de ciberseguridad.",
+      "checks": "Hacking ético * Informática forense * WPT * Electrodomésticos de endurecimiento * BCP * DRP * Seguridad en la gestión de riesgos * SGSI * Monitoreo"
+    },
+    "design": {
+      "title": "Diseño",
+      "description": "Destáquese con un diseño personalizado. Diseños únicos, significativos y efectivos para lograr sus objetivos, permítanos ayudarlo a destacar y comunicar su mensaje.",
+      "subtitle": "DISEÑO QUE SE DESTACA",
+      "copie": "Libere todo el potencial de su marca con diseños personalizados impresionantes.",
+      "checks": "UX * UI * Web * Branding * Brand Book * Embalaje"
+    },
+    "develop": {
+      "title": "Desarrollo",
+      "description": "Nuestros servicios de desarrollo ofrecen soluciones de primera categoría para crear software innovador, aplicaciones móviles y plataformas web que satisfagan las necesidades únicas de su negocio.",
+      "subtitle": "SOLUCIONES EXPERTAS PARA SU NEGOCIO",
+      "copie": "Revolutionice su negocio con soluciones de desarrollo de vanguardia.",
+      "checks": "Web * E-commerce * Apps"
+    },
+    "marketing": {
+      "title": "Marketing",
+      "description": "Nuestros servicios de marketing están diseñados para ayudar a su negocio a lograr sus objetivos específicos a través de la implementación de estrategias y tácticas efectivas.",
+      "subtitle": "MARKETING QUE IMPULSA RESULTADOS",
+      "copie": "Estrategias de marketing efectivas para alcanzar nuevas alturas.",
+      "checks": "Estrategia digital * Contenido * Redes sociales * Campañas sociales pagas * SEM * Correo electrónico y SMS * Whatsapp"
+    },
+    "seo": {
+      "title": "SEO",
+      "description": "Nuestros servicios de SEO ayudan a aumentar su visibilidad en línea y a dirigir tráfico específico a su sitio web.",
+      "subtitle": "SEA ENCONTRADO EN LÍNEA CON NUESTRO SEO",
+      "copie": "Desbloquee su potencial en línea con nuestras estrategias de SEO comprobadas",
+      "checks": "Optimización * Investigación de palabras clave"
+    },
+    "meeting": "Programar una reunión",
+    "partners": "<0>Ellos confían en\n<1>nosotros</1></0>"
+  }
+}
