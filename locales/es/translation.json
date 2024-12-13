@@ -53,11 +53,11 @@
   },
   "services": {
     "cibersecurity": {
-      "title": "Ciberseguridad",
+      "title": "Cibersecurity",
       "description": "No permita que las amenazas cibernéticas comprometan su seguridad. Proteja su negocio con nuestras medidas de ciberseguridad comprobadas.",
       "subtitle": "CIBERSEGURIDAD AVANZADA",
       "copie": "Mantenga sus datos seguros con nuestras soluciones avanzadas de ciberseguridad.",
-      "checks": "Hacking ético * Informática forense * WPT * Electrodomésticos de endurecimiento * BCP * DRP * Seguridad en la gestión de riesgos * SGSI * Monitoreo"
+      "checks": "Hacking ético * Informática forense * WPT * Hardering * BCP * DRP * Seguridad en la gestión de riesgos * SGSI * Monitoreo"
     },
     "design": {
       "title": "Diseño",
